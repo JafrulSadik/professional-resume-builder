@@ -1,11 +1,20 @@
-import './App.css'
+import { RouterProvider } from "react-router-dom";
+import { Toaster } from "sonner";
+import routes from "./router/Router";
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <HomePage />,
+//   },
+// ]);
 
 function App() {
   return (
     <>
-      <div>Hello world!</div>
+      <Toaster />
+      <RouterProvider router={routes} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
