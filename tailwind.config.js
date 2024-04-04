@@ -12,13 +12,17 @@ export default {
     
     extend: {
       colors :{
-        "light-bg" : "#FFFFFF",
-        "light-text" : "#09090B",
-        "light-hover" : "#F4F4F5",
+        "li-bg" : "#09090B",
+        "li-bg-tertiary" : "#f3f4f6",
+        "li-txt" : "#09090B",
+        "li-txt-secondary" : "#575759",
+        "li-hvr" : "#F4F4F5",
+        "li-bg-secondary" : "#111827",
         "dark-bg" : "#09090B",
-        "dark-text-primary" : "#FAFAFA",
-        "dark-text-secondary" : "#A1A1AA",
-        "dark-hover" : "#27272A",
+        "dr-bg-secondary" : "#111827",
+        "dr-txt" : "#FAFAFA",
+        "dr-txt-secondary" : "#A1A1AA",
+        "dr-hvr" : "#27272A",
       } 
     },
 
