@@ -10,7 +10,7 @@ const CreateSection = () => {
       <h1 className=" text-li-txt dark:text-dr-txt text-lg m-4 font-semibold">
         Info Of Yourself
       </h1>
-      <div className="w-full sticky top-[-2px] bg-white dark:bg-dark-bg py-2">
+      <div className="w-full sticky z-10 top-[-2px] bg-white dark:bg-dark-bg py-2">
         <ScoreSect />
       </div>
       <div className="w-full">

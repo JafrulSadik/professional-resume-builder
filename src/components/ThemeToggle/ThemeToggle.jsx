@@ -22,12 +22,12 @@ const ThemeToggle = () => {
 
   return (
     <div
-      className="relative w-10 h-5 flex items-center dark:bg-slate-200 bg-teal-300 rounded-full p-1"
+      className="relative w-10 h-5 flex items-center bg-slate-300 dark:bg-slate-200  rounded-full p-1"
       onClick={() => setDarkMode(!darkMode)}
     >
       <FaMoon className="text-white" size={14} />
       <div
-        className="bg-white absolute dark:bg-medium w-4 h-4 rounded-full shadow-md transform transition-transform duration-300"
+        className="bg-white absolute dark:bg-medium w-4 h-4 rounded-full shadow-md transform "
         style={darkMode ? { left: "2px" } : { right: "2px" }}
       ></div>
     </div>

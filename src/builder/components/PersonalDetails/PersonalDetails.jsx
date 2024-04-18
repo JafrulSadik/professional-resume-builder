@@ -9,7 +9,7 @@ const PersonalDetails = () => {
         Personal Details
       </h1>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3">
         <Input labelData="Job Title"></Input>
         <Input labelData="Email"></Input>
         <Input labelData="First Name"></Input>

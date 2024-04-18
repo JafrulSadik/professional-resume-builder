@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import "../../lib/UI/react-quill-custom.css";
 
 const modules = {
   toolbar: [
@@ -32,8 +33,7 @@ const TextEditor = () => {
 
   return (
     <ReactQuill
-      theme="snow"
-      className="p-3"
+      className=""
       value={value}
       modules={modules}
       formats={formats}

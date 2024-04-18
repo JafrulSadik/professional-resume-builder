@@ -1,4 +1,4 @@
-import Input from "../../../components/Input/Input";
+import Accordion from "../../../components/Accordion/Accordion";
 
 const EducationSect = () => {
   return (
@@ -7,18 +7,7 @@ const EducationSect = () => {
         Education Details
       </h1>
 
-      <div className=" rounded-md">
-        <div>
-          <div className="grid grid-cols-2 gap-3 w-full">
-            <Input labelData="School or College Name"></Input>
-            <Input labelData="Degree"></Input>
-            <Input labelData="Area"></Input>
-            <Input labelData="Grade"></Input>
-            <Input labelData="Start Date"></Input>
-            <Input labelData="End Date"></Input>
-          </div>
-        </div>
-      </div>
+      <Accordion />
 
       {/*  flex justify-center border-[1px] w-32 border-sky-500 p-1 rounded-md */}
       <div className="my-3 hover:bg-sky-100 dark:hover:bg-gray-900 rounded-md">

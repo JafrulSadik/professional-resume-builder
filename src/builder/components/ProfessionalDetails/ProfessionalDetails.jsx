@@ -6,7 +6,7 @@ const ProfessionalDetails = () => {
       <h1 className=" text-li-txt dark:text-dr-txt my-3 font-bold">
         Personal Details
       </h1>
-      <div className="bg-li-bg-tertiary rounded-md">
+      <div className="">
         <TextEditor />
       </div>
     </div>
