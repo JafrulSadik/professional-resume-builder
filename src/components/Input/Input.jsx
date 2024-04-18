@@ -5,7 +5,7 @@ const Input = ({ name, placeholder, labelData, type }) => {
         {labelData}
       </label>
       <input
-        className=" bg-li-bg-tertiary text-li-bg-secondary rounded-md px-3 py-2 outline-none font-normal"
+        className="bg-li-bg-tertiary text-li-bg-secondary rounded-md px-3 py-2 outline-none font-normal"
         name={name}
         placeholder={placeholder}
       />

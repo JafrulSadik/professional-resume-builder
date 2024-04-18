@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Input from "../Input/Input";
 
-const Accordion = ({ title, answer }) => {
+const Accordion = ({ title, inputs }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
   return (
@@ -49,12 +49,15 @@ const Accordion = ({ title, answer }) => {
           <div className="my-2 rounded-md">
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 w-full ">
-                <Input labelData="School or College Name"></Input>
+                {/* <Input labelData="School or College Name"></Input>
                 <Input labelData="Degree"></Input>
                 <Input labelData="Area"></Input>
                 <Input labelData="Grade"></Input>
                 <Input labelData="Start Date"></Input>
-                <Input labelData="End Date"></Input>
+                <Input labelData="End Date"></Input> */}
+                {
+                  inputs?.map((lableData,index) => <Input key={index} labelData={lableData}/>)
+                }
               </div>
             </div>
           </div>

@@ -1,19 +1,18 @@
 import Accordion from "../../../components/Accordion/Accordion";
 
-const EducationSect = () => {
+const ExpSect = () => {
   const inputs = [
-    "School or College Name",
-    "Degree",
-    "Area",
-    "Grade",
+    "Job Title",
+    "Employment Type",
     "Start Date",
-    "End Date"
+    "End Date",
+    "Employment Type"
   ]
 
   return (
     <div className="w-full">
       <h1 className=" text-li-txt dark:text-dr-txt my-3 font-bold">
-        Education Details
+        Experience
       </h1>
 
       <Accordion inputs={inputs}/>
@@ -28,4 +27,4 @@ const EducationSect = () => {
   );
 };
 
-export default EducationSect;
+export default ExpSect;

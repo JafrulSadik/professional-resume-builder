@@ -1,4 +1,5 @@
 import EducationSect from "./components/EducationSect/EducationSect";
+import ExpSect from "./components/ExperianceSect/ExpSect";
 import ImageSect from "./components/ImageSect/ImageSect";
 import PersonalDetails from "./components/PersonalDetails/PersonalDetails";
 import ProfessionalDetails from "./components/ProfessionalDetails/ProfessionalDetails";
@@ -24,6 +25,9 @@ const CreateSection = () => {
       </div>
       <div className="w-full my-5">
         <EducationSect />
+      </div>
+      <div className="w-full my-5">
+        <ExpSect />
       </div>
     </div>
   );
