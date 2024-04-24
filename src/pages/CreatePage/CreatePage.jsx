@@ -1,6 +1,6 @@
 import CreateSection from "../../builder/CreateSection";
 import NavBar from "../../components/NavBar/NavBar";
-import TemplateLayout from "../../templates/layout";
+import TemplateLayout from "../../templates/TemplateLayout/TemplateLayout"
 
 const CreatePage = () => {
   return (

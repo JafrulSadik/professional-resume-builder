@@ -1,40 +1,25 @@
 import {
   DndContext,
-  DragOverlay,
   KeyboardSensor,
   PointerSensor,
   closestCenter,
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
-import { restrictToParentElement, restrictToVerticalAxis, restrictToWindowEdges } from "@dnd-kit/modifiers";
+import { restrictToParentElement } from "@dnd-kit/modifiers";
 import {
   SortableContext,
   arrayMove,
-  arraySwap,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
 import { useState } from "react";
 import Accordion from "../../../components/Accordion/Accordion";
 import { educationData } from "../../../utils/data";
-import Item from "./Item";
 
-
-
-// const inputs = [
-//   "School or College Name",
-//   "Degree",
-//   "Area",
-//   "Grade",
-//   "Start Date",
-//   "End Date",
-// ];
 
 const EducationSect = () => {
   const [eduData, setEduData] = useState(educationData);
-
-
 
   const handleDragEnd = (event) => {
     const { active, over } = event;

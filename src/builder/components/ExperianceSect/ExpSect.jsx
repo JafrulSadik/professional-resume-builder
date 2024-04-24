@@ -4,6 +4,8 @@ import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSo
 import Accordion from "../../../components/Accordion/Accordion";
 import { useState } from "react";
 import { educationData } from "../../../utils/data";
+import { PDFDownloadLink } from "@react-pdf/renderer";
+import TemplateWrapper from "./../../../templates/TemplateWrapper/TemplateWrapper"
 
 const ExpSect = () => {
   const [eduData, setEduData] = useState(educationData);
@@ -64,6 +66,14 @@ const ExpSect = () => {
           + Add Eductation
         </p>
       </div>
+
+      <button className="bg-white px-2 py-2 rounded-md text-sm ">
+        <PDFDownloadLink document={<TemplateWrapper />} fileName="somename.pdf">
+          {({ blob, url, loading, error }) =>
+            loading ? 'Loading document...' : 'Download now!'
+          }
+        </PDFDownloadLink>
+      </button>
     </div>
   );
 };
