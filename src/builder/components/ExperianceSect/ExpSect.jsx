@@ -1,32 +1,40 @@
-import { closestCenter, DndContext, KeyboardSensor, PointerSensor, useSensor, useSensors } from "@dnd-kit/core";
+import {
+  closestCenter,
+  DndContext,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+} from "@dnd-kit/core";
 import { restrictToParentElement } from "@dnd-kit/modifiers";
-import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy } from "@dnd-kit/sortable";
-import Accordion from "../../../components/Accordion/Accordion";
-import { useState } from "react";
-import { educationData } from "../../../utils/data";
+import {
+  arrayMove,
+  SortableContext,
+  sortableKeyboardCoordinates,
+  verticalListSortingStrategy,
+} from "@dnd-kit/sortable";
 import { PDFDownloadLink } from "@react-pdf/renderer";
-import TemplateWrapper from "./../../../templates/TemplateWrapper/TemplateWrapper"
+import { useContext, useState } from "react";
+import Accordion from "../../../components/Accordion/Accordion";
+import { DataContext } from "../../../Provider/Context";
+import TemplateOne from "../../../templates/TemplateOne/TemplateOne";
+import { educationData } from "../../../utils/data";
+import { profile } from "../../../utils/dummy";
 
 const ExpSect = () => {
   const [eduData, setEduData] = useState(educationData);
-
-
 
   const handleDragEnd = (event) => {
     const { active, over } = event;
 
     if (over && over.id !== active.id) {
-
       setEduData((eduData) => {
         const oldIndex = eduData.findIndex((item) => item.id === active.id);
         const newIndex = eduData.findIndex((item) => item.id === over.id);
-        return arrayMove(eduData,oldIndex, newIndex);
+        return arrayMove(eduData, oldIndex, newIndex);
       });
     }
-
-  
   };
-
 
   // console.log("EduData : " ,eduData)
 
@@ -36,6 +44,8 @@ const ExpSect = () => {
       coordinateGetter: sortableKeyboardCoordinates,
     })
   );
+
+  const { data } = useContext(DataContext);
 
   return (
     <div className="w-full">
@@ -68,9 +78,12 @@ const ExpSect = () => {
       </div>
 
       <button className="bg-white px-2 py-2 rounded-md text-sm ">
-        <PDFDownloadLink document={<TemplateWrapper />} fileName="somename.pdf">
+        <PDFDownloadLink
+          document={<TemplateOne userData={profile} isPdf={true} />}
+          fileName="file.pdf"
+        >
           {({ blob, url, loading, error }) =>
-            loading ? 'Loading document...' : 'Download now!'
+            loading ? "Loading document..." : "Download now!"
           }
         </PDFDownloadLink>
       </button>
