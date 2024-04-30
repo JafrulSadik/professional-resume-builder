@@ -11,7 +11,7 @@ const TemplateWrapper = () => {
   const { data, setData } = useContext(DataContext);
 
   return (
-    <div className="h-auto flex flex-col">
+    <div className="h-auto flex flex-col scale-[0.6]">
       <TemplateOne userData={profile} isLive={true} />
     </div>
   );

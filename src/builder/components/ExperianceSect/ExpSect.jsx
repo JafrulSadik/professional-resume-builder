@@ -17,7 +17,7 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 import { useContext, useState } from "react";
 import Accordion from "../../../components/Accordion/Accordion";
 import { DataContext } from "../../../Provider/Context";
-import TemplateOne from "../../../templates/TemplateOne/TemplateOne";
+import TemplateOnePDF from "../../../templates/TemplateOne/TemplateOnePDF";
 import { educationData } from "../../../utils/data";
 import { profile } from "../../../utils/dummy";
 
@@ -79,13 +79,21 @@ const ExpSect = () => {
 
       <button className="bg-white px-2 py-2 rounded-md text-sm ">
         <PDFDownloadLink
-          document={<TemplateOne userData={profile} isPdf={true} />}
+          document={<TemplateOnePDF userData={profile} isPdf={true} />}
           fileName="file.pdf"
         >
           {({ blob, url, loading, error }) =>
             loading ? "Loading document..." : "Download now!"
           }
         </PDFDownloadLink>
+        {/* <BlobProvider
+          document={<TemplateOnePDF userData={profile}></TemplateOnePDF>}
+        >
+          {({ blob, url, loading, error }) => {
+            // Do whatever you need with blob here
+            return <div>There's something going on on the fly</div>;
+          }}
+        </BlobProvider> */}
       </button>
     </div>
   );

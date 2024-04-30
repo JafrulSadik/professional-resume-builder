@@ -8,7 +8,7 @@ export const profile = {
         phone : "+88 01756565656",
         dob : "06 May 2000",
         nationality : "Bangladeshi",
-        summary : " As a proficient Software Engineer, I bring a well-rounded skill set that encompasses both backend and frontend development, allowing me to contribute to all layers of application architecture. With a strong foundation in computer science principles and several years of experience in the tech industry, I have honed my abilities in programming, problem-solving, and system design."
+        summary : "As a proficient Software Engineer, I bring a well-rounded skill set that encompasses both backend and frontend development, allowing me to contribute to all layers of application architecture. With a strong foundation in computer science principles and several years of experience in the tech industry, I have honed my abilities in programming, problem-solving, and system design."
     },
     links : [
         {
